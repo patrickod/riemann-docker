@@ -15,4 +15,4 @@ EXPOSE 5555
 EXPOSE 5555/udp
 EXPOSE 5556
 
-CMD echo "127.0.0.1 $(hostname) > /etc/hosts"; /usr/bin/riemann /etc/riemann/riemann.config
+CMD echo 127.0.0.1 $(hostname) > /etc/hosts; /usr/bin/riemann /etc/riemann/riemann.config
