@@ -16,6 +16,7 @@ EXPOSE 5556
 
 # Share the config directory as a volume
 VOLUME /etc/riemann
+ADD riemann.config /etc/riemann/riemann.config
 
 # Set the hostname in /etc/hosts so that Riemann doesn't die due to unknownHostException
 CMD echo 127.0.0.1 $(hostname) > /etc/hosts; /usr/bin/riemann /etc/riemann/riemann.config
